@@ -35,9 +35,12 @@
     		
     		let bloquesQuedan = bloquesTotales-bloquesHastaAhora;
 
+        let minutosRestantes = (bloquesQuedan - Math.trunc(bloquesQuedan))*50;
+
     		document.getElementById('bloques-pasados').innerHTML = bloquesHastaAhora.toFixed(1);
     		document.getElementById('bloques-total').innerHTML = bloquesTotales.toFixed(1);
     		document.getElementById('bloques-quedan').innerHTML = bloquesQuedan.toFixed(1);
+        document.getElementById('minutos-quedan').innerHTML = minutosRestantes.toFixed(0);
     	}
     </script>
 
@@ -191,6 +194,8 @@
         	<p><b>Han pasado: </b> <span id="bloques-pasados">?</span> bloques.</p>
          	<p><b>De un total de: </b> <span id="bloques-total">?</span> bloques.</p>
           	<p><b>Quedan: </b> <span id="bloques-quedan">?</span> bloques.</p>
+            <h2 style="margin-bottom: 0px; padding-bottom: 1px;"><span id="minutos-quedan">8</span> minutos</h2>
+            <p style="margin-top: 0px; padding-top: 1px;"><b>restantes en este bloque</b></p>
           <button type="submit" href="#" onclick="calcular()">Submit</button>
         </div>
       </form>
