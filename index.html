@@ -50,20 +50,28 @@
       display: flex;
       justify-content: center;
       height: 100%;
+
       }
       body, div, h1, form, input, p { 
       padding: 0;
       margin: 0;
       outline: none;
       font-family: Roboto, Arial, sans-serif;
+      color: white;
       font-size: 16px;
-      color: #666;
+      /*color: #666;*/
+      }
+      input {
+        color: #666;
       }
       h1 {
       padding: 10px 0;
       font-size: 32px;
       font-weight: 300;
       text-align: center;
+      }
+      a {
+        color:white;
       }
       p {
       font-size: 12px;
@@ -80,7 +88,10 @@
       border-radius: 5px; 
       border: solid 1px #ccc;
       box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-      background: #ebebeb; 
+      /*background: #ebebeb; */
+      background-image: url('./sun.jpg');
+      background-repeat: no-repeat;
+  background-size: auto;
       }
       form {
       margin: 0 30px;
@@ -197,6 +208,8 @@
             <h2 style="margin-bottom: 0px; padding-bottom: 1px;"><span id="minutos-quedan">8</span> minutos</h2>
             <p style="margin-top: 0px; padding-top: 1px;"><b>restantes en este bloque</b></p>
           <button type="submit" href="#" onclick="calcular()">Submit</button>
+          <hr>
+          <p>Foto de <a href="https://www.pexels.com/es-es/foto/mar-amanecer-cielo-puesta-de-sol-8777972/">Олег Черепанов</a></p>
         </div>
       </form>
     </div>
