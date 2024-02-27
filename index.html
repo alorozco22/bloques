@@ -6,13 +6,39 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     
     <script type="text/javascript">
+      
+      function actualizarEstiloSegunHora(horaYa){
+        // Cambiar fondooo
+         if (Number(horaYa) < 18) {
+          console.log(horaYa);
+          document.getElementsByClassName('main-block')[0].style['background-image']= "url('./beach2.jpg')"
+
+          document.getElementById('creditos-foto').innerHTML = 'Foto de <a target="_blank" href="https://www.pexels.com/es-es/foto/barco-estacionado-1450353/">Asad Photo Maldives</a>'
+
+          document.getElementsByClassName('btn-block')[0].style['background-color']= "rgba(0, 0, 0, 0.4)"
+         }
+      }
+
+      window.onload = function() {
+        let horaActual = new Date();
+      
+        let horaYa = horaActual.getHours();
+        actualizarEstiloSegunHora(horaYa);
+        
+      };
+
     	function calcular(){
+        
+
     		let horaDesperte = document.getElementById('desperte').value;
     		let horaDormire = document.getElementById('dormire').value;
     		let horaActual = new Date();
 			
-			let horaYa = horaActual.getHours();
-			let minYa = horaActual.getMinutes();
+			   let horaYa = horaActual.getHours();
+			   let minYa = horaActual.getMinutes();
+
+         actualizarEstiloSegunHora(horaYa);
+        
     		
     		let hora0 = parseInt(horaDesperte.split(':')[0]);
     		let hora1 = parseInt(horaDormire.split(':')[0]);
@@ -209,7 +235,7 @@
             <p style="margin-top: 0px; padding-top: 1px;"><b>restantes en este bloque</b></p>
           <button type="submit" href="#" onclick="calcular()">Submit</button>
           <hr>
-          <p>Foto de <a href="https://www.pexels.com/es-es/foto/mar-amanecer-cielo-puesta-de-sol-8777972/">Олег Черепанов</a></p>
+          <p id="creditos-foto">Foto de <a target="_blank" href="https://www.pexels.com/es-es/foto/mar-amanecer-cielo-puesta-de-sol-8777972/">Олег Черепанов</a></p>
         </div>
       </form>
     </div>
