@@ -61,7 +61,8 @@
     		
     		let bloquesQuedan = bloquesTotales-bloquesHastaAhora;
 
-        let minutosRestantes = (bloquesQuedan - Math.trunc(bloquesQuedan))*50;
+        let minutosRestantes = (1-(bloquesHastaAhora - Math.trunc(bloquesHastaAhora)))*50
+        
 
     		document.getElementById('bloques-pasados').innerHTML = bloquesHastaAhora.toFixed(1);
     		document.getElementById('bloques-total').innerHTML = bloquesTotales.toFixed(1);
