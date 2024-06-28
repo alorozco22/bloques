@@ -15,7 +15,7 @@
 
           document.getElementById('creditos-foto').innerHTML = 'Foto de <a target="_blank" href="https://www.pexels.com/es-es/foto/barco-estacionado-1450353/">Asad Photo Maldives</a>'
 
-          document.getElementsByClassName('btn-block')[0].style['background-color']= "rgba(0, 0, 0, 0.4)"
+          document.getElementsByClassName('btn-block')[0].style['background-color']= "rgba(0, 0, 0, 0.6)"
          }
       }
 
@@ -24,6 +24,7 @@
       
         let horaYa = horaActual.getHours();
         actualizarEstiloSegunHora(horaYa);
+        setInterval(calcular,1000);
         
       };
 
@@ -77,7 +78,7 @@
       display: flex;
       justify-content: center;
       height: 100%;
-
+      background-color: #d1d1e0;
       }
       body, div, h1, form, input, p { 
       padding: 0;
@@ -118,7 +119,7 @@
       /*background: #ebebeb; */
       background-image: url('./sun.jpg');
       background-repeat: no-repeat;
-  background-size: auto;
+      background-size: auto;
       }
       form {
       margin: 0 30px;
@@ -192,6 +193,8 @@
       .btn-block {
       margin-top: 10px;
       text-align: center;
+      border-radius: 20px;
+      padding: 10px;
       }
       button {
       width: 100%;
@@ -207,11 +210,13 @@
       button:hover {
       background: #26a9e0;
       }
+
+
     </style>
   </head>
   <body>
     <div class="main-block">
-      <h1>Calculadora</h1>
+      <h1>Bloques</h1>
       <form action="javascript:void(0);">
         <hr>
         <!--div class="account-type">
@@ -233,8 +238,8 @@
          	<p><b>De un total de: </b> <span id="bloques-total">?</span> bloques.</p>
           	<p><b>Quedan: </b> <span id="bloques-quedan">?</span> bloques.</p>
             <h2 style="margin-bottom: 0px; padding-bottom: 1px;"><span id="minutos-quedan">8</span> minutos</h2>
-            <p style="margin-top: 0px; padding-top: 1px;"><b>restantes en este bloque</b></p>
-          <button type="submit" href="#" onclick="calcular()">Submit</button>
+            <p style="margin-top: 0px; padding-top: 1px;"><b>RESTANTES EN ESTE BLOQUE</b></p>
+          <!--button type="submit" href="#" onclick="calcular()">Submit</button-->
           <hr>
           <p id="creditos-foto">Foto de <a target="_blank" href="https://www.pexels.com/es-es/foto/mar-amanecer-cielo-puesta-de-sol-8777972/">Олег Черепанов</a></p>
         </div>
